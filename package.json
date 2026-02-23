@@ -1,0 +1,28 @@
+{
+    "name": "minions-test-targets-workspace",
+    "private": true,
+    "version": "0.1.0",
+    "description": "Agent-under-test definitions, endpoints, capabilities, and auth configs",
+    "type": "module",
+    "license": "MIT",
+    "author": "Mehdi Nabhani <mehdi@the-mehdi.com> (https://the-mehdi.com)",
+    "workspaces": [
+        "packages/*",
+        "apps/*"
+    ],
+    "scripts": {
+        "build": "pnpm --filter @minions-test-targets/sdk run build && pnpm --filter @minions-test-targets/cli run build && pnpm --filter @minions-test-targets/docs run build && pnpm --filter @minions-test-targets/blog run build && pnpm --filter @minions-test-targets/web run build",
+        "deploy:blog": "pnpm --filter @minions-test-targets/blog run build && netlify deploy --dir apps/blog/dist --prod",
+        "deploy:docs": "pnpm --filter @minions-test-targets/docs run build && netlify deploy --dir apps/docs/dist --prod",
+        "deploy:web": "pnpm --filter @minions-test-targets/web run build && netlify deploy --dir apps/web/dist --prod",
+        "test": "pnpm --filter @minions-test-targets/sdk run test",
+        "lint": "pnpm --filter @minions-test-targets/sdk run build && pnpm --filter @minions-test-targets/sdk run lint && pnpm --filter @minions-test-targets/cli run lint",
+        "deploy": "pnpm run deploy:blog"
+    },
+    "engines": {
+        "node": ">=20"
+    },
+    "devDependencies": {
+        "typescript": "^5.9.3"
+    }
+}

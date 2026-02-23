@@ -1,6 +1,12 @@
 ---
 name: minions-test-targets
-description: Agent-under-test definitions, endpoints, capabilities, and auth configs
+id: OC-0170
+version: 1.0.0
+description: "Agent-under-test definitions, endpoints, capabilities, and auth configs"
+category: dev-tools
+subcategory: testing
+tags: ["minion", "dev-tools", "testing"]
+comments:
 ---
 
 # minions-test-targets — Agent Skills

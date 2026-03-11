@@ -6,3 +6,4 @@ description: "CLI for minions-test-targets — Agent-under-test definitions, end
 priority: high
 deploy_url: null
 tags: null
+category: minion-toolbox

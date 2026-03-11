@@ -1,0 +1,8 @@
+name: "@minions-test-targets/docs"
+project_scope: child
+child_type: docs
+parent_project: minions-test-targets-workspace
+description: "Standard compliance definition for @minions-test-targets/docs"
+priority: high
+deploy_url: null
+tags: null
